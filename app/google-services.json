@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1062112654078",
+    "project_id": "janatapharmacy-f9afd",
+    "storage_bucket": "janatapharmacy-f9afd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062112654078:android:64521258ca009a46d0abaf",
+        "android_client_info": {
+          "package_name": "com.drugporter.janatapharmacy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062112654078-cuf3lkedq4t1qd7vbnd9uv4jfdjc82d7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDay02AMqfx-mli6zTHvH5qkL3TwGHRf9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062112654078-cuf3lkedq4t1qd7vbnd9uv4jfdjc82d7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
