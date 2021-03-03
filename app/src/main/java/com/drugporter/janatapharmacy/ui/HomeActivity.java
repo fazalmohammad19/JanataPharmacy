@@ -16,6 +16,8 @@ import androidx.fragment.app.FragmentTransaction;
 import com.drugporter.janatapharmacy.R;
 import com.drugporter.janatapharmacy.fragment.CategoryFragment;
 import com.drugporter.janatapharmacy.fragment.HomeFragment;
+import com.drugporter.janatapharmacy.locationpick.LocationGetActivity;
+import com.drugporter.janatapharmacy.locationpick.MapUtility;
 import com.drugporter.janatapharmacy.utiles.DatabaseHelper;
 import com.drugporter.janatapharmacy.utiles.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -26,6 +28,7 @@ import butterknife.OnClick;
 
 import static com.drugporter.janatapharmacy.ui.AddressActivity.changeAddress;
 import static com.drugporter.janatapharmacy.utiles.SessionManager.pincoded;
+import static com.drugporter.janatapharmacy.utiles.SessionManager.user;
 
 public class HomeActivity extends RootActivity {
 
@@ -45,6 +48,7 @@ public class HomeActivity extends RootActivity {
 
     SessionManager sessionManager;
     DatabaseHelper helper;
+    public static String userId = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,16 +56,30 @@ public class HomeActivity extends RootActivity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         sessionManager = new SessionManager(HomeActivity.this);
+        sessionManager.setStringData(SessionManager.pincode, "2200");
+        sessionManager.setStringData(pincoded, "2200");
         helper = new DatabaseHelper(HomeActivity.this);
         homeActivity = HomeActivity.this;
         txtCountcard = findViewById(R.id.txt_countcard);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         if (sessionManager.getStringData(pincoded).equalsIgnoreCase("")) {
-            startActivity(new Intent(HomeActivity.this, AddressActivity.class));
+            startActivity(new Intent(HomeActivity.this, LocationGetActivity.class));
         } else {
             setLocation(sessionManager.getStringData(pincoded));
             openFragment(new HomeFragment());
             updateItem();
+        }
+
+        Intent i = getIntent();
+        if (i != null) {
+            Bundle extras = i.getExtras();
+            if (extras != null) {
+                userId = getIntent().getStringExtra("userid");
+                /*newuser = getIntent().getStringExtra("newuser");*/
+
+            }
+        }else{
+
         }
     }
 
@@ -104,7 +122,8 @@ public class HomeActivity extends RootActivity {
                             return true;
                         case R.id.navigation_medicine:
                             item.setIcon(R.drawable.ic_medicine_black);
-                            openFragment(new CategoryFragment());
+                            /*openFragment(new CategoryFragment());*/
+                            startActivity(new Intent(HomeActivity.this, OrderByTyping.class));
                             return true;
                         case R.id.navigation_prescription:
                             item.setIcon(R.drawable.ic_prescription_black);

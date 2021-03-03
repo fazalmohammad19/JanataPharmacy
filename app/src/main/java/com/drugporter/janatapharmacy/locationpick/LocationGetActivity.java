@@ -19,7 +19,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,9 +29,11 @@ import androidx.core.content.ContextCompat;
 
 import com.drugporter.janatapharmacy.R;
 import com.drugporter.janatapharmacy.model.RestResponse;
+import com.drugporter.janatapharmacy.model.User;
 import com.drugporter.janatapharmacy.retrofit.APIClient;
 import com.drugporter.janatapharmacy.retrofit.GetResult;
 import com.drugporter.janatapharmacy.ui.HomeActivity;
+import com.drugporter.janatapharmacy.utiles.SessionManager;
 import com.drugporter.janatapharmacy.utiles.Utility;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -81,13 +82,13 @@ import static com.google.android.gms.location.LocationServices.getFusedLocationP
 public class LocationGetActivity extends AppCompatActivity implements OnMapReadyCallback, GetResult.MyListener {
 
 
-    @BindView(R.id.lvl_actionsearch)
-    LinearLayout lvlActionsearch;
-    @BindView(R.id.rmap)
-    RelativeLayout rmap;
-    @BindView(R.id.ed_hoseno)
+   /* @BindView(R.id.lvl_actionsearch)
+    LinearLayout lvlActionsearch;*/
+    /*@BindView(R.id.rmap)
+    RelativeLayout rmap;*/
+    @BindView(R.id.etAddress_GetLocationActivity)
     EditText edHoseno;
-    @BindView(R.id.ed_landmark)
+    @BindView(R.id.etHouseNum_GetLocationActivity)
     EditText edLandmark;
     @BindView(R.id.txt_home)
     TextView txtHome;
@@ -131,24 +132,28 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
     String aid = "0";
     String atype = "Home";
 
+    SessionManager sessionManager;
+    User user;
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
         ButterKnife.bind(this);
+        sessionManager = new SessionManager(this);
+        user = sessionManager.getUserDetails("");
 
-        requestPermissions(new String[]{Manifest.permission.CALL_PHONE, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+        /*requestPermissions(new String[]{Manifest.permission.CALL_PHONE, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         final LocationManager manager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER) && Utility.hasGPSDevice(LocationGetActivity.this)) {
             Toast.makeText(LocationGetActivity.this, "Gps not enabled", Toast.LENGTH_SHORT).show();
             Utility.enableLoc(LocationGetActivity.this);
-        }
+        }*/
 
         addressBundle = new Bundle();
-        fusedLocationProviderClient = getFusedLocationProviderClient(this);
+       /* fusedLocationProviderClient = getFusedLocationProviderClient(this);
         getLocationRequest();
-
         locationCallback = new LocationCallback() {
             @Override
             public void onLocationAvailability(LocationAvailability locationAvailability) {
@@ -163,23 +168,21 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
                 //Location fetched, update listener can be removed
                 fusedLocationProviderClient.removeLocationUpdates(locationCallback);
             }
-        };
+        };*/
 
-        MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+        /*MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);*/
         Intent i = getIntent();
         if (i != null) {
             Bundle extras = i.getExtras();
             if (extras != null) {
                 userAddress = extras.getString(MapUtility.address);
-
                 edHoseno.setText(getIntent().getStringExtra("hno"));
-                edLandmark.setText(getIntent().getStringExtra("landmark"));
+                edLandmark.setText(getIntent().getStringExtra("hno"));
                 userid = getIntent().getStringExtra("userid");
                 newuser = getIntent().getStringExtra("newuser");
                 aid = getIntent().getStringExtra("aid");
                 atype = getIntent().getStringExtra("atype");
-
                 mLatitude = getIntent().getDoubleExtra(MapUtility.latitude, 0);
                 mLongitude = getIntent().getDoubleExtra(MapUtility.longitude, 0);
                 if (atype.equalsIgnoreCase("Home")) {
@@ -201,18 +204,18 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
             currentLongitude = savedInstanceState.getDouble("currentLongitude");
         }
 
-        if (!MapUtility.isNetworkAvailable(this)) {
+        /*if (!MapUtility.isNetworkAvailable(this)) {
             MapUtility.showToast(this, "Please Connect to Internet");
-        }
+        }*/
 
 
     }
 
-    @OnClick({R.id.lvl_actionsearch, R.id.txt_home, R.id.txt_office, R.id.txt_ather, R.id.btn_save})
+    @OnClick({/*R.id.lvl_actionsearch,*/ R.id.txt_home, R.id.txt_office, R.id.txt_ather, R.id.btn_save})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.lvl_actionsearch:
-                if (!Places.isInitialized()) {
+            /*case R.id.lvl_actionsearch:*/
+                /*if (!Places.isInitialized()) {
                     Places.initialize(this.getApplicationContext(), MapUtility.apiKey);
                 }
                 // Set the fields to specify which types of place data to return.
@@ -221,7 +224,7 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
                         AutocompleteActivityMode.OVERLAY, fields)
                         .build(this);
                 this.startActivityForResult(intent, placeAutocompleteRequestCode);
-                break;
+                break;*/
             case R.id.txt_home:
                 txtHome.setBackground(getResources().getDrawable(R.drawable.rounded_button));
                 txtOffice.setBackground(getResources().getDrawable(R.drawable.box1));
@@ -268,7 +271,7 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+        /*mMap = googleMap;
         mMap.clear();
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         mMap.getUiSettings().setMapToolbarEnabled(false);
@@ -319,7 +322,7 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
         } else if (checkAndRequestPermissions()) {
             startParsingAddressToShow();
 
-        }
+        }*/
 
 
     }
@@ -713,7 +716,7 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
 
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("uid", userid);
+            /*jsonObject.put("uid", userid);
             jsonObject.put("address", txtAddress.getText().toString() + " " + txtCity.getText().toString());
             jsonObject.put("pincode", LocationGetActivity.this.userPostalCode);
             jsonObject.put("houseno", edHoseno.getText().toString());
@@ -721,7 +724,24 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
             jsonObject.put("type", atype);
             jsonObject.put("lat_map", LocationGetActivity.this.mLatitude);
             jsonObject.put("long_map", LocationGetActivity.this.mLongitude);
-            jsonObject.put("aid", aid);
+            jsonObject.put("aid", aid);*/
+
+            /*jsonObject.put("uid", user.getId());*/
+            jsonObject.put("uid", userid);
+            jsonObject.put("address", edHoseno.getText().toString());
+            jsonObject.put("pincode", "2200");
+            jsonObject.put("houseno", edLandmark.getText().toString());
+            jsonObject.put("landmark", "null");
+            jsonObject.put("type", atype);
+            jsonObject.put("lat_map", "24");
+            jsonObject.put("long_map", "90");
+            if(newuser.equalsIgnoreCase("update")){
+                jsonObject.put("aid", aid);
+            }else{
+                jsonObject.put("aid", "0");
+            }
+
+
             RequestBody bodyRequest = RequestBody.create(MediaType.parse("application/json"), jsonObject.toString());
             Call<JsonObject> call = APIClient.getInterface().setAddress(bodyRequest);
             GetResult getResult = new GetResult();
@@ -741,9 +761,14 @@ public class LocationGetActivity extends AppCompatActivity implements OnMapReady
                 Toast.makeText(LocationGetActivity.this, response.getResponseMsg(), Toast.LENGTH_SHORT).show();
                 if (response.getResult().equalsIgnoreCase("true")) {
                     if (newuser.equalsIgnoreCase("Newuser")) {
-                        startActivity(new Intent(LocationGetActivity.this, HomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        startActivity(new Intent(LocationGetActivity.this, HomeActivity.class)
+                                .putExtra("userid", userid)
+                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        finish();
+                    }else{
+                        finish();
                     }
-                    finish();
+
                 }
             }
         } catch (Exception e) {

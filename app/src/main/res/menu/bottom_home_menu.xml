@@ -9,7 +9,7 @@
         android:id="@+id/navigation_medicine"
         android:icon="@drawable/ic_medicine"
         android:enabled="true"
-        android:title="Medicine" />
+        android:title="Write" />
 
     <item
         android:id="@+id/navigation_prescription"

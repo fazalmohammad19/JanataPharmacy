@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.bumptech.glide.Glide;
+import com.ceylonlabs.imageviewpopup.ImagePopup;
 import com.drugporter.janatapharmacy.R;
 import com.drugporter.janatapharmacy.model.PrescriptionOrderH;
 import com.drugporter.janatapharmacy.model.User;
@@ -192,8 +193,21 @@ public class PrescriptionOrderDetailsActivity extends RootActivity implements Ge
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int i) {
-
+            ImagePopup imagePopup = new ImagePopup(PrescriptionOrderDetailsActivity.this);
+            imagePopup.setFullScreen(true);
+            // Optional
+            imagePopup.setHideCloseIcon(false);
+            // Optional
+            imagePopup.setImageOnClickClose(false);
+            // Optional
             Glide.with(mContext).load(APIClient.baseUrl + "/janata/" + mData.get(i)).thumbnail(Glide.with(mContext).load(R.drawable.ezgifresize)).into(holder.imgIcon);
+            imagePopup.initiatePopupWithGlide(APIClient.baseUrl + "/janata/" + mData.get(i));
+            holder.imgIcon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    imagePopup.viewPopup();
+                }
+            });
 
 
         }

@@ -204,7 +204,12 @@ public class HomeFragment extends Fragment implements CategoryAdapter.RecyclerTo
         custPrograssbar.prograssCreate(getActivity());
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("uid", user.getId());
+            if(!HomeActivity.userId.equalsIgnoreCase("")){
+                jsonObject.put("uid", HomeActivity.userId.toString());
+            }else{
+                jsonObject.put("uid", user.getId());
+            }
+
             jsonObject.put("pincode", sessionManager.getStringData(pincode));
         } catch (Exception e) {
             e.printStackTrace();

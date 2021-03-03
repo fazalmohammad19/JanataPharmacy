@@ -33,6 +33,9 @@ public interface UserService {
     @POST(APIClient.APPEND_URL + "p_address_user.php")
     Call<JsonObject> setAddress(@Body RequestBody requestBody);
 
+    @POST(APIClient.APPEND_URL + "p_address_delete.php")
+    Call<JsonObject> deleteAddress(@Body RequestBody requestBody);
+
     @POST(APIClient.APPEND_URL + "p_user_login.php")
     Call<JsonObject> login(@Body RequestBody requestBody);
 
@@ -78,7 +81,11 @@ public interface UserService {
 
     @POST(APIClient.APPEND_URL + "p_order_prescription.php")
     @Multipart
-    Call<JsonObject> uploadMultiFile(@Part("uid") RequestBody uid, @Part("Full_Address") RequestBody address, @Part("size") RequestBody size, @Part List<MultipartBody.Part> parts);
+    Call<JsonObject> uploadMultiFile(@Part("uid") RequestBody uid, @Part("Full_Address") RequestBody address, @Part("size") RequestBody size, @Part List<MultipartBody.Part> parts, @Part("note") RequestBody note);
+
+    @POST(APIClient.APPEND_URL + "p_order_by_typing.php")
+    Call<JsonObject> submitTextPrescription(@Body RequestBody requestBody);
+
 
     @POST(APIClient.APPEND_URL + "p_order_history.php")
     Call<JsonObject> getOrder(@Body RequestBody requestBody);

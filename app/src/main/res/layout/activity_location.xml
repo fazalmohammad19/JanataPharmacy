@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".locationpick.LocationGetActivity">
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:id="@+id/rmap"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -42,7 +42,7 @@
 
 
         </LinearLayout>
-    </RelativeLayout>
+    </RelativeLayout>-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -90,10 +90,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="বিস্তারিত ঠিকানা" />
+                    android:text="Address" />
 
                 <EditText
-                    android:id="@+id/ed_hoseno"
+                    android:id="@+id/etAddress_GetLocationActivity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
@@ -114,10 +114,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="উল্লেখযোগ্য স্থান ( মসজিদের পাশে / স্কুলের পাশে ইত্যাদি)" />
+                    android:text="House Number" />
 
                 <EditText
-                    android:id="@+id/ed_landmark"
+                    android:id="@+id/etHouseNum_GetLocationActivity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"

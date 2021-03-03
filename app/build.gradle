@@ -71,6 +71,7 @@ dependencies {
     implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
     implementation 'com.stripe:stripe-android:14.5.0'
     implementation "com.stripe:stripe-java:19.23.0"
+    implementation 'com.github.chathuralakmal:AndroidImagePopup:1.2.2'
 
 }
 apply plugin: 'com.google.gms.google-services'

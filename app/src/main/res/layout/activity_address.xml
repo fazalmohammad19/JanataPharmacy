@@ -71,7 +71,7 @@
         android:padding="10dp">
 
 
-        <LinearLayout
+        <!--<LinearLayout
             android:id="@+id/lvl_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -171,7 +171,13 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/colorgrey" />
+            android:background="@color/colorgrey" />-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/quantum_grey100">
 
         <LinearLayout
             android:id="@+id/lvl_myaddress"
@@ -194,9 +200,32 @@
                 android:id="@+id/my_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/quantum_grey100"
                 android:scrollbars="vertical" />
 
 
         </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fbAddAddress_AddressActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_add_white_24"
+                android:backgroundTint="@color/colorPrimary"/>
+
+
+
+
+        </RelativeLayout>
+
+
     </LinearLayout>
+
+
+
+
 </LinearLayout>

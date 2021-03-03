@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
-        android:name="com.drugporter.janatapharmacy.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_logo"
         android:label="@string/app_name"
@@ -20,36 +20,37 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.drugporter.janatapharmacy.ui.ForgotActivity"></activity>
-        <activity android:name="com.drugporter.janatapharmacy.ui.NotificationActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.ChanegPasswordActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.SearchActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.PrivacyPolicyActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.TramandconditionActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.ContactActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.AboutActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.UploadPrescriptionActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.locationpick.LocationGetActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.OrderDetailsActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.PrescriptionOrderDetailsActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.OrderActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.PrescriptionOrderActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.SettingActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.ProfileActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.EditProfileActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.LoginActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.VerifyPhoneActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.CompleOrderActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.PaymentOptionActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.CartActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.AddressActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.ProductDetailsActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.HomeActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.CoupunActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.RazerpayActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.PaypalActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.StripPaymentActivity" />
-        <activity android:name="com.drugporter.janatapharmacy.ui.IntroActivity">
+        <activity android:name=".ui.OrderByTyping"></activity>
+        <activity android:name=".ui.ForgotActivity" />
+        <activity android:name=".ui.NotificationActivity" />
+        <activity android:name=".ui.ChanegPasswordActivity" />
+        <activity android:name=".ui.SearchActivity" />
+        <activity android:name=".ui.PrivacyPolicyActivity" />
+        <activity android:name=".ui.TramandconditionActivity" />
+        <activity android:name=".ui.ContactActivity" />
+        <activity android:name=".ui.AboutActivity" />
+        <activity android:name=".ui.UploadPrescriptionActivity" />
+        <activity android:name=".locationpick.LocationGetActivity" />
+        <activity android:name=".ui.OrderDetailsActivity" />
+        <activity android:name=".ui.PrescriptionOrderDetailsActivity" />
+        <activity android:name=".ui.OrderActivity" />
+        <activity android:name=".ui.PrescriptionOrderActivity" />
+        <activity android:name=".ui.SettingActivity" />
+        <activity android:name=".ui.ProfileActivity" />
+        <activity android:name=".ui.EditProfileActivity" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.VerifyPhoneActivity" />
+        <activity android:name=".ui.CompleOrderActivity" />
+        <activity android:name=".ui.PaymentOptionActivity" />
+        <activity android:name=".ui.CartActivity" />
+        <activity android:name=".ui.AddressActivity" />
+        <activity android:name=".ui.ProductDetailsActivity" />
+        <activity android:name=".ui.HomeActivity" />
+        <activity android:name=".ui.CoupunActivity" />
+        <activity android:name=".ui.RazerpayActivity" />
+        <activity android:name=".ui.PaypalActivity" />
+        <activity android:name=".ui.StripPaymentActivity" />
+        <activity android:name=".ui.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,22 +58,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.drugporter.janatapharmacy.ui.ImagePreviewActivity"
+            android:name=".ui.ImagePreviewActivity"
             android:theme="@style/AppTheme" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/api_key" />
-
-        <!-- Set custom default icon. This is used when no icon is set for incoming notification
-   messages.See README(https://github.com/firebase/quickstart-android/tree/master/messaging#custom-default-icon) for more. -->
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification
+   messages.See README(https://github.com/firebase/quickstart-android/tree/master/messaging#custom-default-icon) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/ic_launcher_logo" />
-
-        <!-- Set color used with incoming notification messages.
+        <!--
+ Set color used with incoming notification messages.
         This is used when no color is set for the incoming notification message. See README
-        (https://github.com/firebase/quickstart-android/tree/master/messaging#custom-default-color) for more. -->
+        (https://github.com/firebase/quickstart-android/tree/master/messaging#custom-default-color) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorPrimary" />
