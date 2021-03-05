@@ -193,158 +193,158 @@
 
 
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_view"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="2"
-                    android:clipToPadding="false"
-                    android:scrollbars="vertical" />
+                    android:layout_height="wrap_content"
+                    android:text="Type Your Order"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Type here the Medicine Name or Product Name that you want to order."
+                    android:textSize="12dp"
+                    android:layout_marginLeft="12sp"
+                    android:layout_marginRight="12sp"
+                    android:gravity="center"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:gravity="center|top"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="12sp"
+                    android:layout_marginRight="12sp"
+                    android:background="@drawable/box1"
                     android:orientation="vertical"
-                    >
+                    android:padding="10dp">
 
-                    <LinearLayout
+                    <EditText
+                        android:id="@+id/etTextPrescription_UploadPrescriptionActivity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Type Your Order"
-                            android:textSize="16dp"
-                            android:gravity="center"
-                            android:textStyle="bold"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Type here the Medicine Name or Product Name that you want to order."
-                            android:textSize="12dp"
-                            android:layout_marginLeft="12sp"
-                            android:layout_marginRight="12sp"
-                            android:gravity="center"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginLeft="12sp"
-                            android:layout_marginRight="12sp"
-                            android:background="@drawable/box1"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <EditText
-                                android:id="@+id/etTextPrescription_UploadPrescriptionActivity"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@null"
-                                android:text=""
-                                android:padding="5dp" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="15dp"/>
-                    <LinearLayout
-                        android:id="@+id/changeAddressLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorgrey0"
-                        android:elevation="0dp"
-                        android:gravity="center|top"
-                        android:minHeight="60dp"
-                        android:padding="15dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:padding="5dp"
-                            android:src="@drawable/ic_address" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/txt_atype"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingBottom="3dp"
-                                android:text="Delivery to : Home()"
-                                android:textSize="14dp" />
-
-                            <TextView
-                                android:id="@+id/txt_address"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingBottom="3dp"
-                                android:singleLine="true"
-                                android:text="20 Apple squre Lagamni chok,surat" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/txt_changeadress"
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Change"
-                            android:textColor="@color/colorPrimary"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="15dp"/>
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:id="@+id/btn_ather"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_button"
-                            android:gravity="center"
-                            android:text="More Upload"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/btn_submit"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/rounded_button"
-                            android:gravity="center"
-                            android:text="Submit"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                        android:background="@null"
+                        android:text=""
+                        android:padding="5dp" />
                 </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+            <LinearLayout
+                android:id="@+id/changeAddressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorgrey0"
+                android:elevation="0dp"
+                android:gravity="center|top"
+                android:minHeight="60dp"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_address" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_atype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:text="Delivery to : Home()"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/txt_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:singleLine="true"
+                        android:text="20 Apple squre Lagamni chok,surat" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_changeadress"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Change"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btn_ather"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:text="More Upload"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
             </LinearLayout>
 
         </ScrollView>
