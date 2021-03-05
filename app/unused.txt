@@ -41986,8 +41986,8 @@ com.google.android.material.textfield.MaterialAutoCompleteTextView:
 com.drugporter.janatapharmacy.ui.OrderDetailsActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.OrderDetailsActivity target
     public android.view.View view7f090126
-    public android.view.View view7f0902b7
-    public android.view.View view7f09029d
+    public android.view.View view7f0902b6
+    public android.view.View view7f09029c
 org.bouncycastle.math.ec.ECCurve$Config:
     public org.bouncycastle.math.ec.ECCurve$Config setEndomorphism(org.bouncycastle.math.ec.endo.GLVEndomorphism)
 com.google.android.gms.internal.location.zzbk
@@ -43330,8 +43330,8 @@ com.google.android.datatransport.cct.a.zzk$zza
 com.drugporter.janatapharmacy.ui.PrescriptionOrderDetailsActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.PrescriptionOrderDetailsActivity target
     public android.view.View view7f090126
-    public android.view.View view7f0902b7
-    public android.view.View view7f09029d
+    public android.view.View view7f0902b6
+    public android.view.View view7f09029c
 com.google.firebase.auth.api.internal.zzap:
     public final boolean zza(java.lang.String)
 com.google.android.datatransport.cct.a.zzi$zza:
@@ -45993,7 +45993,7 @@ com.drugporter.janatapharmacy.ui.CartActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.CartActivity target
     public android.view.View view7f090126
     public android.view.View view7f09012a
-    public android.view.View view7f09028a
+    public android.view.View view7f090289
     public android.view.View view7f090076
 com.google.android.gms.measurement.internal.zzfp:
     public final java.lang.String zzb
@@ -52780,7 +52780,7 @@ com.drugporter.janatapharmacy.ui.ProductDetailsActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.ProductDetailsActivity target
     public android.view.View view7f090071
     public android.view.View view7f090126
-    public android.view.View view7f0901e6
+    public android.view.View view7f0901e5
 com.google.android.gms.dynamic.IObjectWrapper$Stub
 com.google.android.gms.common.internal.IAccountAccessor$Stub$zza:
     public final android.accounts.Account getAccount()
@@ -53788,15 +53788,15 @@ androidx.transition.TransitionSet:
     public androidx.transition.TransitionSet removeListener(androidx.transition.Transition$TransitionListener)
 com.drugporter.janatapharmacy.ui.SettingActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.SettingActivity target
-    public android.view.View view7f09015c
-    public android.view.View view7f090159
-    public android.view.View view7f09014d
-    public android.view.View view7f090148
+    public android.view.View view7f09015b
+    public android.view.View view7f090158
+    public android.view.View view7f09014c
+    public android.view.View view7f090147
+    public android.view.View view7f09014f
+    public android.view.View view7f09015f
+    public android.view.View view7f090162
+    public android.view.View view7f090154
     public android.view.View view7f090150
-    public android.view.View view7f090160
-    public android.view.View view7f090163
-    public android.view.View view7f090155
-    public android.view.View view7f090151
 okhttp3.internal.cache.CacheRequest
 com.onesignal.PushRegistratorAbstractGoogle:
     public static synthetic int access$000()
@@ -54171,10 +54171,10 @@ com.drugporter.janatapharmacy.ui.CartActivity$ItemAdp:
     private void lambda$onBindViewHolder$0(com.drugporter.janatapharmacy.ui.CartActivity$ItemAdp$ViewHolder,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
     public com.drugporter.janatapharmacy.ui.CartActivity$ItemAdp$ViewHolder onCreateViewHolder(android.view.ViewGroup)
     public void onBindViewHolder(com.drugporter.janatapharmacy.ui.CartActivity$ItemAdp$ViewHolder,int)
+    public void lambda$onBindViewHolder$4$CartActivity$ItemAdp(com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
+    public void lambda$onBindViewHolder$1$CartActivity$ItemAdp(com.drugporter.janatapharmacy.ui.CartActivity$ItemAdp$ViewHolder,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
     public void lambda$null$2$CartActivity$ItemAdp(com.drugporter.janatapharmacy.utiles.MyCart,android.content.DialogInterface,int)
     public void lambda$onBindViewHolder$0$CartActivity$ItemAdp(com.drugporter.janatapharmacy.ui.CartActivity$ItemAdp$ViewHolder,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
-    public void lambda$onBindViewHolder$1$CartActivity$ItemAdp(com.drugporter.janatapharmacy.ui.CartActivity$ItemAdp$ViewHolder,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
-    public void lambda$onBindViewHolder$4$CartActivity$ItemAdp(com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
 com.android.volley.Cache$Entry:
     public boolean isExpired()
     public boolean refreshNeeded()
@@ -56846,9 +56846,9 @@ com.google.android.gms.internal.measurement.zzpg:
     public void <init>(com.google.android.gms.internal.measurement.zzeb)
 com.drugporter.janatapharmacy.ui.HomeActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.HomeActivity target
-    public android.view.View view7f0902a0
-    public android.view.View view7f0901e6
-    public android.view.View view7f090149
+    public android.view.View view7f09029f
+    public android.view.View view7f0901e5
+    public android.view.View view7f090148
 com.google.android.datatransport.runtime.AutoValue_SendRequest
 com.google.android.datatransport.cct.CCTDestination:
     public java.lang.String getName()
@@ -56871,7 +56871,7 @@ com.bumptech.glide.load.resource.bitmap.BitmapImageDecoderResourceDecoder:
     public final synthetic bridge boolean handles(android.graphics.ImageDecoder$Source,com.bumptech.glide.load.Options)
 com.drugporter.janatapharmacy.ui.AddressActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.AddressActivity target
-    public android.view.View view7f090157
+    public android.view.View view7f090156
     public android.view.View view7f090126
 okhttp3.internal.http2.Http2Stream:
     public static synthetic java.util.Deque access$000(okhttp3.internal.http2.Http2Stream)
@@ -56896,9 +56896,9 @@ com.bumptech.glide.manager.RequestManagerTreeNode:
     public abstract java.util.Set getDescendants()
 com.drugporter.janatapharmacy.locationpick.LocationGetActivity_ViewBinding:
     public com.drugporter.janatapharmacy.locationpick.LocationGetActivity target
-    public android.view.View view7f09029a
-    public android.view.View view7f0902a7
-    public android.view.View view7f090285
+    public android.view.View view7f090299
+    public android.view.View view7f0902a6
+    public android.view.View view7f090284
     public android.view.View view7f090078
 androidx.core.content.res.ColorStateListInflaterCompat
 org.bouncycastle.math.ec.WNafUtil$4:
@@ -57647,7 +57647,7 @@ com.drugporter.janatapharmacy.utiles.DatabaseHelper:
 com.drugporter.janatapharmacy.ui.UploadPrescriptionActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.UploadPrescriptionActivity target
     public android.view.View view7f090126
-    public android.view.View view7f0902b0
+    public android.view.View view7f0902af
     public android.view.View view7f09007d
     public android.view.View view7f090072
     public android.view.View view7f09007a
@@ -58693,8 +58693,8 @@ com.google.android.gms.internal.measurement.zzkx:
 com.drugporter.janatapharmacy.ui.OrderActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.OrderActivity target
     public android.view.View view7f090126
-    public android.view.View view7f0902b5
-    public android.view.View view7f090292
+    public android.view.View view7f0902b4
+    public android.view.View view7f090291
 kotlin.ranges.IntProgression$Companion
 com.google.android.gms.internal.location.zzaz:
     private android.os.Bundle getGetServiceRequestExtraArgs$com$google$android$gms$internal$location$zzk()
@@ -58989,9 +58989,9 @@ com.drugporter.janatapharmacy.ui.PrescriptionOrderActivity$ItemAdp:
     private synthetic void lambda$onBindViewHolder$0(com.drugporter.janatapharmacy.model.PrescriptionHistory,android.view.View)
     public com.drugporter.janatapharmacy.ui.PrescriptionOrderActivity$ItemAdp$ViewHolder onCreateViewHolder(android.view.ViewGroup)
     public void onBindViewHolder(com.drugporter.janatapharmacy.ui.PrescriptionOrderActivity$ItemAdp$ViewHolder,int)
-    public void lambda$onBindViewHolder$3$PrescriptionOrderActivity$ItemAdp(com.drugporter.janatapharmacy.model.PrescriptionHistory,int,android.view.View)
     public void lambda$null$1$PrescriptionOrderActivity$ItemAdp(com.drugporter.janatapharmacy.model.PrescriptionHistory,int,android.content.DialogInterface,int)
     public synthetic void lambda$onBindViewHolder$0$PrescriptionOrderActivity$ItemAdp(com.drugporter.janatapharmacy.model.PrescriptionHistory,android.view.View)
+    public void lambda$onBindViewHolder$3$PrescriptionOrderActivity$ItemAdp(com.drugporter.janatapharmacy.model.PrescriptionHistory,int,android.view.View)
 com.google.android.gms.common.internal.Objects
 com.google.firebase.analytics.connector.zza:
     public final void handle(com.google.firebase.events.Event)
@@ -59456,10 +59456,10 @@ com.stripe.model.PaymentIntent:
     public abstract java.lang.String getClientSecret()
 com.drugporter.janatapharmacy.ui.LoginActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.LoginActivity target
-    public android.view.View view7f0902a8
+    public android.view.View view7f0902a7
     public android.view.View view7f090076
-    public android.view.View view7f0902a3
-    public android.view.View view7f090299
+    public android.view.View view7f0902a2
+    public android.view.View view7f090298
 com.drugporter.janatapharmacy.ui.SettingActivity_ViewBinding$3:
     public final synthetic com.drugporter.janatapharmacy.ui.SettingActivity_ViewBinding this$0
 org.bouncycastle.math.raw.Nat160
@@ -60550,9 +60550,9 @@ com.drugporter.janatapharmacy.ui.ProductDetailsActivity:
     private void lambda$setJoinPlayrList$0(int[],android.widget.TextView,android.widget.LinearLayout,android.widget.LinearLayout,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
     public static synthetic java.util.ArrayList access$000(com.drugporter.janatapharmacy.ui.ProductDetailsActivity)
     public static synthetic void access$100(com.drugporter.janatapharmacy.ui.ProductDetailsActivity,android.widget.LinearLayout,com.drugporter.janatapharmacy.model.ProductPrice)
-    public void lambda$setJoinPlayrList$1$ProductDetailsActivity(int[],android.widget.TextView,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
-    public void lambda$setJoinPlayrList$2$ProductDetailsActivity(android.widget.LinearLayout,android.widget.LinearLayout,int[],android.widget.TextView,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
     public void lambda$setJoinPlayrList$0$ProductDetailsActivity(int[],android.widget.TextView,android.widget.LinearLayout,android.widget.LinearLayout,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
+    public void lambda$setJoinPlayrList$2$ProductDetailsActivity(android.widget.LinearLayout,android.widget.LinearLayout,int[],android.widget.TextView,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
+    public void lambda$setJoinPlayrList$1$ProductDetailsActivity(int[],android.widget.TextView,com.drugporter.janatapharmacy.utiles.MyCart,android.view.View)
     public android.widget.TextView btnAddtocart
     public android.widget.ImageView imgBack
 androidx.appcompat.app.WindowDecorActionBar$3:
@@ -60867,11 +60867,11 @@ org.bouncycastle.x509.X509CollectionStoreParameters:
     public abstract java.util.Collection getCollection()
 com.drugporter.janatapharmacy.fragment.HomeFragment_ViewBinding:
     public com.drugporter.janatapharmacy.fragment.HomeFragment target
-    public android.view.View view7f090164
-    public android.view.View view7f0902bf
-    public android.view.View view7f0902c0
+    public android.view.View view7f090163
     public android.view.View view7f0902be
-    public android.view.View view7f0902c1
+    public android.view.View view7f0902bf
+    public android.view.View view7f0902bd
+    public android.view.View view7f0902c0
 androidx.transition.PropertyValuesHolderUtils
 com.stripe.net.HttpURLConnectionClient$1
 com.google.gson.internal.bind.ReflectiveTypeAdapterFactory:
@@ -61028,8 +61028,8 @@ com.google.android.gms.internal.firebase_auth.zzfa:
 com.drugporter.janatapharmacy.ui.PrescriptionOrderActivity_ViewBinding:
     public com.drugporter.janatapharmacy.ui.PrescriptionOrderActivity target
     public android.view.View view7f090126
-    public android.view.View view7f0902b5
-    public android.view.View view7f090292
+    public android.view.View view7f0902b4
+    public android.view.View view7f090291
 com.nimbusds.jose.crypto.impl.CompositeKey
 org.bouncycastle.crypto.engines.RSACoreEngine:
     public void init(boolean,org.bouncycastle.crypto.CipherParameters)
@@ -64380,9 +64380,9 @@ com.drugporter.janatapharmacy.ui.OrderActivity$ItemAdp:
     private synthetic void lambda$onBindViewHolder$0(com.drugporter.janatapharmacy.model.OrderHistory,android.view.View)
     public com.drugporter.janatapharmacy.ui.OrderActivity$ItemAdp$ViewHolder onCreateViewHolder(android.view.ViewGroup)
     public void onBindViewHolder(com.drugporter.janatapharmacy.ui.OrderActivity$ItemAdp$ViewHolder,int)
-    public void lambda$null$1$OrderActivity$ItemAdp(com.drugporter.janatapharmacy.model.OrderHistory,int,android.content.DialogInterface,int)
-    public synthetic void lambda$onBindViewHolder$0$OrderActivity$ItemAdp(com.drugporter.janatapharmacy.model.OrderHistory,android.view.View)
     public void lambda$onBindViewHolder$3$OrderActivity$ItemAdp(com.drugporter.janatapharmacy.model.OrderHistory,int,android.view.View)
+    public synthetic void lambda$onBindViewHolder$0$OrderActivity$ItemAdp(com.drugporter.janatapharmacy.model.OrderHistory,android.view.View)
+    public void lambda$null$1$OrderActivity$ItemAdp(com.drugporter.janatapharmacy.model.OrderHistory,int,android.content.DialogInterface,int)
 org.bouncycastle.crypto.util.SSHBuffer:
     public byte[] readPaddedBlock()
     public byte[] readPaddedBlock(int)

@@ -16,8 +16,8 @@ android {
         applicationId "com.drugporter.janatapharmacy"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.0.2"
+        versionCode 4
+        versionName "1.0.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
                 onesignal_app_id : 'b84c5688-b86b-486c-ae62-1986b50d7f51',
